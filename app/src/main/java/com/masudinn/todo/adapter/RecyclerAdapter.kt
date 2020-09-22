@@ -17,12 +17,20 @@ class RecyclerAdapter(val callback: Callback) : RecyclerView.Adapter<RecyclerAda
         fun bindData(data :Todo){
             itemView.judul.text = data.title
             itemView.desc.text = data.desc
+
+            itemView.setOnClickListener {
+                callback.onClick(data)
+            }
         }
 
     }
 
     interface Callback {
         fun onClick(data: Todo)
+    }
+
+    fun setData(data: List<Todo>){
+        this.dataList = data
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
