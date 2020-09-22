@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.item.view.*
 import java.util.ArrayList
 import javax.security.auth.callback.Callback
 
-class RecylcerAdapter(val callback: Callback) : RecyclerView.Adapter<RecylcerAdapter.ViewHolder>() {
+class RecyclerAdapter(val callback: Callback) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     private var dataList:List<Todo> = ArrayList()
 
     class ViewHolder(itemView: View,val callback: Callback) : RecyclerView.ViewHolder(itemView) {
@@ -19,6 +19,10 @@ class RecylcerAdapter(val callback: Callback) : RecyclerView.Adapter<RecylcerAda
             itemView.desc.text = data.desc
         }
 
+    }
+
+    interface Callback {
+        fun onClick(data: Todo)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
