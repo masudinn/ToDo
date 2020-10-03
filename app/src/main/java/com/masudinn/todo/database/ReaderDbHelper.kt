@@ -17,7 +17,6 @@ class ReaderDbHelper (context:Context) : SQLiteOpenHelper(context,DATABASE_NAME,
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-
     }
 
     companion object{

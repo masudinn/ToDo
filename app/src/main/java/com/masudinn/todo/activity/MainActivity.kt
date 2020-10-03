@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.Callback {
         setContentView(R.layout.activity_main)
 
         dbHelper = ReaderDbHelper(this);
-
         initListener()
     }
 
@@ -52,14 +51,13 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.Callback {
             DbContract.DataEntry.COLUMN_NAMA_TITLE,
             DbContract.DataEntry.COLUMN_NAMA_DESC
         )
-        val sortOrder = "${DbContract.DataEntry.COLUMN_NAMA_DESC} DESC"
+        val sortOrder = "${DbContract.DataEntry.COLUMN_NAMA_TITLE} ASC"
 
         val cursor =
             db.query(
                 DbContract.DataEntry.TABLE_NAME,
                 projection,
-                null, null, null, null,
-                sortOrder)
+                null, null, null, null,sortOrder)
         val dataList = mutableListOf<Todo>()
         with(cursor){
             while (moveToNext()){

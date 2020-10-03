@@ -17,15 +17,6 @@
         android:text="Daily Note"
         android:fontFamily="@font/robotomedium"
         android:textSize="25sp"/>
-    <TextView
-        android:id="@+id/text1"
-        android:layout_below="@id/text"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Kami Bisa Membantu,\nMencatat Keperluan Anda :)"
-        android:textSize="15sp"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +28,7 @@
         android:id="@+id/fab"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
-        android:layout_below="@id/text1"
+        android:layout_below="@id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"

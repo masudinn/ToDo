@@ -61,8 +61,8 @@ class DetailActivity : AppCompatActivity() {
                 edtTitle.error = "Silahkan Masukan Title"
                 edtDesc.requestFocus()
             } else if (mDesc.isNullOrEmpty()) {
-                edtTitle.requestFocus()
                 edtDesc.error = "Silahkan Masukan Description"
+                edtTitle.requestFocus()
             } else {
                 val selection = "${BaseColumns._ID} LIKE ?"
                 val selectionArg = arrayOf(data.id.toString())
@@ -85,6 +85,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun initListener() {
+        btnDelete.visibility = View.GONE
         btnSave.setOnClickListener {
             var mTitle = edtTitle.text.toString()
             var mDesc = edtDesc.text.toString()
@@ -93,8 +94,8 @@ class DetailActivity : AppCompatActivity() {
                 edtTitle.error = "Silahkan Masukan Title"
                 edtDesc.requestFocus()
             } else if (mDesc.isNullOrEmpty()) {
-                edtTitle.requestFocus()
                 edtDesc.error = "Silahkan Masukan Description"
+                edtTitle.requestFocus()
             } else {
                 val values = ContentValues().apply {
                     put(DbContract.DataEntry.COLUMN_NAMA_TITLE, mTitle)

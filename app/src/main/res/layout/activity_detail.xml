@@ -54,11 +54,11 @@
 
     <Button
         android:id="@+id/btnSave"
-
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnDelete"
-        android:background="#009688"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorPrimaryDark"
         android:text="SAVE"
         android:textColor="#fff" />
 
@@ -66,10 +66,9 @@
         android:id="@+id/btnDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="15dp"
+        android:layout_above="@id/btnSave"
         android:background="#EF2939"
-        android:text="Delete"
+        android:text="Delete Plan"
         android:textColor="#fff" />
 
 </RelativeLayout>
